@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="imagex/png" href="./assets/icone.png">
+    <link rel="stylesheet" href="style.css">
+    <title>Gasolina ou Álcool?</title>
+</head>
+<body>
+    
+    <main class="container">
+        <img src="./assets/Fuel-station.svg" alt="Posto de combustivel" class="logo">
+        <h1>Qual a melhor opção?</h1>
+        <form class="form">
+            <label class="label">Gasolina (preço por litro):</label>
+            <input class="input" id="gasolina" type="number" min="0" step="0.1" placeholder="5.40" required>
+
+            <label class="label">Álcool (preço por litro):</label>
+            <input class="input" id="alcool" type="number" min="0" step="0.1" placeholder="3.60" required>
+
+            <input class="button" type="submit" value="Calcular" onclick="calcular(event)">
+        </form>
+        <div class="container-resultado">
+            <p>Com base em cálculos.</p>
+            <p>A melhor opção para você é:</p>
+            <h4 id="resultado"></h4>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+:root {
+    --color-background-1: #F8FAE5;
+    --color-background-2: #43766C;
+    --color-button: #F8FAE5;
+    --color-result: #007969;
+    --color-shadow: #000000;
+    --color-font: #151515;
+    --color-hover: #f8fae5be;
+}
+
+* {
+    color: var(--color-font);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    background: linear-gradient(var(--color-background-1), var(--color-background-2)) no-repeat;
+    height: 100vh;
+    width: 100vw;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    height: 15rem;
+    margin: 10px;
+    width: 100vw;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+}
+
+.label {
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.input {
+    margin-bottom: 10px;
+    height: 5vh;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 0 14px;
+    border: none;
+    box-shadow:0 5px 5px var(--color-shadow);
+}
+
+.input:focus {
+    outline: none;
+    box-shadow:0 5px 5px var(--color-shadow) inset;
+}
+
+.button {
+    margin-top: 10px;
+    border: none;
+    border-radius: 8px;
+    height: 5vh;
+    width: 100%;
+    font-weight: bold;
+    font-size: 16px;
+    background-color: var(--color-button);
+    box-shadow:0 5px 5px var(--color-shadow);
+    cursor: pointer;
+    transition: 150ms all;
+}
+
+.button:hover {
+    background-color: var(--color-hover);
+    transform: scale(1.1);
+}
+
+.container-resultado {
+  background-color: var(--color-result);
+  border-radius: 5px;
+  height: 15vh;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  box-shadow:0 5px 5px var(--color-shadow);
+  animation: flipResult 2s; 
+}
+
+.resultado {
+    font-weight: bold;
+}
+
+@keyframes flipResult {
+    from {
+        transform: rotateX(90deg);
+    }
+    to {
+        transform: rotateX(0deg);
+    }
+}
+
